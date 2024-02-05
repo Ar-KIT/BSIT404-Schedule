@@ -192,3 +192,56 @@ let mySched = {
         }
     ]
 }
+
+
+let currentDate = new Date();
+
+function renderCalendar() {
+    const calendarBody = document.getElementById("calendarBody");
+    const currentMonthElement = document.getElementById("currentMonth");
+    currentMonthElement.textContent = currentDate.toLocaleString('default', { month: 'long' }) + " " + currentDate.getFullYear();
+    calendarBody.innerHTML = "";
+    const daysInMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
+    const firstDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
+    let dayCounter = 1;
+
+    const previousMonthLastDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
+    const previousMonthStartDay = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
+    let currentMonthRow = calendarBody.insertRow();
+
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 7; j++) {
+            const cell = currentMonthRow.insertCell();
+            if (i === 0 && j < firstDayIndex) {
+                const dayFromPreviousMonth = previousMonthLastDate - previousMonthStartDay + j + 1;
+                cell.textContent = dayFromPreviousMonth;
+                cell.classList.add("faded");
+            } else if (dayCounter <= daysInMonth) {
+                cell.textContent = dayCounter;
+                if (currentDate.getFullYear() === new Date().getFullYear() &&
+                    currentDate.getMonth() === new Date().getMonth() &&
+                    dayCounter === new Date().getDate()) {
+                    cell.classList.add("today");
+                }
+                dayCounter++;
+            } else {
+                cell.textContent = dayCounter - daysInMonth;
+                cell.classList.add("faded");
+                dayCounter++;
+            }
+        }
+        currentMonthRow = calendarBody.insertRow();
+    }
+}
+renderCalendar();
+
+const nextMonth = document.getElementById('nextMonth');
+const previousMonth = document.getElementById('previousMonth');
+previousMonth.addEventListener('click', () =>{
+    currentDate.setMonth(currentDate.getMonth() - 1);
+    renderCalendar();
+})
+nextMonth.addEventListener('click', () =>{
+    currentDate.setMonth(currentDate.getMonth() + 1);
+    renderCalendar();
+})

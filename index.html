@@ -16,7 +16,32 @@
     </header>
     <main>
         <section>
-
+            <div class="calendar-container">
+                <div class="calendar">
+                    <div>
+                        <button id="previousMonth">
+                            <div class="left-angle-bracket"></div>
+                        </button>
+                        <span id="currentMonth"></span>
+                        <button id="nextMonth">
+                            <div class="right-angle-bracket"></div>
+                        </button>
+                    </div>
+                    <table class="calendarTable">
+                        <thead>
+                            <th>S</th>
+                            <th>M</th>
+                            <th>T</th>
+                            <th>W</th>
+                            <th>T</th>
+                            <th>F</th>
+                            <th>S</th>
+                        </thead>
+                        <tbody id="calendarBody">
+                            <!-- Calendar days will be inserted here dynamically using JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
         </section>
         <section>
             <div class="dropdown-container">

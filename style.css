@@ -16,7 +16,7 @@ body{
 }
 header, section{
     width: 100%;
-    max-width: 425px;
+    max-width: 400px;
 }
 header{
     position: relative;
@@ -60,7 +60,7 @@ header{
 }
 
 section{
-    width: 425px;
+    width: 400px;
 }
 .dropdown-container{
     width: 100%;
@@ -70,7 +70,7 @@ section{
 }
 .dropdown{
     width: 100%;
-    max-width: 300px;
+    /* max-width: 300px; */
 }
 .dropdown-listOfSections{
     min-width: 12em;
@@ -139,21 +139,92 @@ section{
 }
 
 table{
-    max-width: 425px;
+    max-width: 400px;
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
-thead{
+.sched-container thead{
     font-size: 0.8rem;
     background-color: #090C08;
     border: 1px solid #fff;
 }
-table th, table td{
+.sched-container th, table td{
     padding: 14px 10px;
     overflow: hidden;
     border-bottom: 1px solid rgba(254, 245, 239, 0.5);
 }
 tbody{
     font-size: 0.7rem;
+}
+
+
+.right-angle-bracket {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid white;
+}
+.left-angle-bracket {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid white;
+}
+.calendar-container{
+    padding: 20px 10px;
+    margin: 0px 5px 10px 5px;
+    background-color: none;
+    border: none;
+}
+.calendarTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    gap: 10px;
+    table-layout: fixed;
+    border-spacing: 7px;
+    border: none;
+}
+.calendarTable thead{
+    background-color: #090C08;
+}
+.calendarTable th, .calendarTable td {
+    padding: 5px;
+    text-align: center;
+    height: 10px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    
+}
+.calendarTable th{
+    font-weight: 800;
+}
+.today {
+    background-color: #EC4E20;
+    color: white;
+    font-weight: bold;
+}
+.faded {
+    color: #aaaa;
+}
+#previousMonth, #nextMonth{
+    background-color: transparent;
+    border: none;
+}
+.calendar div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: none;
+}
+.calendar div #currentMonth{
+    width: 170px;
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
 }
