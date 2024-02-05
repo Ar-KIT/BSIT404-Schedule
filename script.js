@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let dayCounter = 1;
 
         const previousMonthLastDate = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).getDate();
-        const previousMonthStartDay = firstDayIndex === 0 ? 6 : firstDayIndex - 1;
+        const previousMonthStartDay = firstDayIndex === 0 ? 6 : firstDayIndex   ;
         let currentMonthRow = calendarBody.insertRow();
 
         for (let i = 0; i < 6; i++) {
