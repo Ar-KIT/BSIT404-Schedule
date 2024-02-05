@@ -15,8 +15,10 @@ body{
     background-color: #171A21;
 }
 header, section{
-    width: 100%;
-    max-width: 400px;
+    width: clamp(100px, 100%, 400px);
+}
+main{
+    width: clamp(200px, 100%, 400px);
 }
 header{
     position: relative;
@@ -26,12 +28,12 @@ header{
     margin: 25px 15px;
 }
 .header-container h1{
-    font-size: 5rem;
+    font-size: clamp(3rem, 2.5vw, 5rem);
     color: #EC4E20;
     letter-spacing: 2px;
 }
 .header-container h3{
-    font-size: 2rem;
+    font-size:clamp(1.5rem, 2.5vw, 2rem);
     color: #FAF8D4;
     letter-spacing: 2px;
 }
@@ -43,7 +45,7 @@ header{
     transform: translate(-50%, -50%) rotate(-5deg);
 
     background-color: #20A4F3;
-    font-size: 2rem;
+    font-size:clamp(1rem, 2.5vw, 2rem);
     padding: 5px 15px;
     border-radius: 15px;
     text-wrap: nowrap;
@@ -60,7 +62,8 @@ header{
 }
 
 section{
-    width: 400px;
+    width: clamp(100px, 100%, 400px);
+    margin: 0 auto;
 }
 .dropdown-container{
     width: 100%;
@@ -69,8 +72,7 @@ section{
     margin-bottom: 20px;
 }
 .dropdown{
-    width: 100%;
-    /* max-width: 300px; */
+    width: clamp(100px, 100%, 400px);
 }
 .dropdown-listOfSections{
     min-width: 12em;
@@ -137,25 +139,26 @@ section{
     display: block;
     opacity: 1;
 }
-
-table{
-    max-width: 400px;
+.sched-container {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+.sched-container table{
+    width: clamp(100px, 100%, 400px);
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 .sched-container thead{
-    font-size: 0.8rem;
     background-color: #090C08;
     border: 1px solid #fff;
 }
 .sched-container th, table td{
-    padding: 14px 10px;
+    padding: 15px 5px;
     overflow: hidden;
     border-bottom: 1px solid rgba(254, 245, 239, 0.5);
-}
-tbody{
-    font-size: 0.7rem;
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
 }
 
 
@@ -180,7 +183,7 @@ tbody{
     border: none;
 }
 .calendarTable {
-    width: 100%;
+    width: clamp(100px, 100%, 400px);
     border-collapse: collapse;
     margin-top: 15px;
     gap: 10px;
@@ -195,13 +198,9 @@ tbody{
     padding: 5px;
     text-align: center;
     height: 10px;
-    font-size: 12px;
+    font-size: 0.8rem;
     font-weight: 500;
     border: none;
-    
-}
-.calendarTable th{
-    font-weight: 800;
 }
 .today {
     background-color: #EC4E20;
