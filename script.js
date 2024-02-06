@@ -186,7 +186,7 @@ let mySched = {
         {
             subject: "System Integration and Architecture",
             day: "W",
-            time: "1:30PM - 4:00PM",
+            time: "1:00PM - 4:00PM",
             room: "COMLAB602",
             instructor: "Sir Joel"
         },
