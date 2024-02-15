@@ -210,11 +210,11 @@ let mySched = {
             instructor: "Ma'am Cath"
         },
         {
-            subject: "Integrative Programming",
+            subject: "Information Management",
             day: "F",
             time: "4:00PM - 7:00PM",
             room: "COMLAB604",
-            instructor: "Sir Joel"
+            instructor: "Sir Lord"
         }
     ],
     Saturday: [
