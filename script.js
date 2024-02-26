@@ -149,7 +149,7 @@ let mySched = {
             day: "M",
             time: "1:00PM - 3:00PM",
             room: "RM606",
-            instructor: "Sir Lord"
+            instructor: "Sir John"
         },
         {
             subject: "Integrative Programming",
@@ -214,7 +214,7 @@ let mySched = {
             day: "F",
             time: "4:00PM - 7:00PM",
             room: "COMLAB604",
-            instructor: "Sir Lord"
+            instructor: "Sir John"
         }
     ],
     Saturday: [
@@ -223,21 +223,21 @@ let mySched = {
             day: "S",
             time: "10:00AM - 1:00PM",
             room: "RM504",
-            instructor: "Sir Ronel"
+            instructor: "Ma'am Dani"
         },
         {
             subject: "Network Technology 1",
             day: "S",
             time: "1:30PM - 3:30PM",
             room: "Rm506",
-            instructor: "Asnairah"
+            instructor: "Ma'am Alex"
         },
         {
             subject: "Network Technology 1",
             day: "S",
             time: "4:00PM - 7:00PM",
             room: "COMLAB602",
-            instructor: "Asnairah"
+            instructor: "Ma'am Alex"
         }
     ]
 }
